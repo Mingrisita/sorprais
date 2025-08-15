@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tercer aniversario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #content {
+      display: none;
+      background: white;
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 500px;
+    }
+    #login {
+      background: white;
+      padding: 20px 45px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 400px;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #error {
+      color: red;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="login">
+    <h2>Ups, tiene contraseña, pedíselo a Mingrid</h2>
+    <input type="password" id="passwordInput" placeholder="Contraseña..." />
+    <div id="error"></div>
+    <button onclick="checkPassword()">Entrar</button>
+  </div>
+
+  <div id="content">
+    <p><strong>sorpresitabeibi.aternos.me:46104</strong></p>
+    <p>Una IP de maikra? Eso quiere decir que tenés que ir YA YA YA a maikrasito uwu</p>
+  </div>
+
+  <script>
+    const password = "14deagosto";  // Poné acá la contraseña que quieras
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const errorDiv = document.getElementById("error");
+      if (input === password) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      } else {
+        errorDiv.textContent = "Contraseña incorrecta, intentá de nuevo.";
+      }
+    }
+  </script>
+</body>
+</html>
